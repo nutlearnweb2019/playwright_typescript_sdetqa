@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
 
-test.only('Verify page title', async ({page}) => {
+test('Verify page title', async ({page}) => {
     await page.goto('https://unsplash.com/');
 
     const title: string = await page.title();
@@ -8,4 +8,5 @@ test.only('Verify page title', async ({page}) => {
 
     await expect(page).toHaveTitle('Beautiful Free Images & Pictures | Unsplash');
 });
+
 
